@@ -1,0 +1,112 @@
+%========================================================================================================
+%
+%										            Taskpage
+%
+%========================================================================================================
+
+
+\newgeometry{
+	showframe,
+	footskip=0cm,%
+	headsep=0cm,% 
+	top=1cm, %поле зверху
+	bottom=1cm, %поле знизу
+	left=1cm, %поле ліворуч
+	right=2cm, %поле праворуч    
+}
+
+\begin{spacing}{1.1}
+		
+\begin{enumerate}[label*=\arabic*., labelindent=0pt, itemindent=0cm]
+	\makeatletter%
+
+
+%\clearpage
+%
+%\newgeometry{
+%	a4paper,%
+%	footskip=0cm,%
+%	headsep=0.5cm,% 
+%	top=2cm, %поле зверху
+%	bottom=2cm, %поле знизу
+%	left=1cm, %поле ліворуч
+%	right=2cm, %поле праворуч
+%}
+
+\item[7]  Орієнтовний перелік публікацій: \@publications
+\item[8] Консультанти розділів дисертації
+	\noindent%
+\begin{center}
+		\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|r|r|}
+	\hline
+	\multirow{2}[4]{*}{Розділ} & \multirow{2}[4]{*}{\thead{Прізвище, ініціали та посада \\ консультанта}} &                     \multicolumn{2}{c|}{Підпис, дата}                     \\ \cline{3-4}
+	                           &                                                               & \multicolumn{1}{c|}{завдання видав} & \multicolumn{1}{c|}{завдання прийняв} \\ \hline
+	            %1              &                         \@konsultant                          &                                     %&                                     \\ \hline
+	            2              &                         \@konsultant                          &                                     &                                     \\ \hline
+	            3              &                         \@konsultant                          &                                     &                                     \\ \hline
+\end{tabular}%
+}
+\end{center}
+	
+	\item[9] Дата видачі завдання \@issuing
+	\begin{center}
+		Календарний план
+	\end{center}
+\begin{center}
+	\small%
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|c|r|}
+	\hline
+	\thead{№ \\ з/п} & \thead{Назва етапів виконання \\ магістерської дисертації} & \thead{ Термін виконання \\етапів проекту} & Примітка \\ \hline
+	   1. & Опрацювання літератури за темою                 &            10.09.2020 - 31.10.2020               &          \\ \hline
+	   2. & Написання літературного огляду                  &            01.11.2020 - 28.12.2020               &          \\ \hline
+	   3. & Моделювання роботи РРД з присадкою калію           &            05.01.2021 - 18.03.2021               &          \\ \hline
+%	   4. & Знаходження геометрично вигідного положення     &                                                  &          \\ \hline
+	   4. & Написання другої частини дипломної роботи       &            19.03.2021 - 11.05.2021               &          \\ \hline
+%	   6. & Варіювання подачі вторинного повітря            &                                                  &          \\ \hline
+	   5. & Підготовка тез			                        &            11.05.2021 - 13.05.2021               &          \\ \hline
+	   5. & Виступ на конференції                           &            14.05.2021                            &          \\ \hline
+	   6. & Написання третьої частини дипломної роботи      &            15.05.2021 - 29.05.2021               &          \\ \hline
+	   7. & Написання висновків                             &            30.05.2021 - 31.05.2021               &          \\ \hline
+	   8. & Подання роботи на рецензування                  &            01.06.2021                            &          \\ \hline
+	   9. & Підготовка доповіді та презентації              &            19.05.2023 - 22.05.2023               &          \\ \hline
+	  10. & Подання роботи до захисту                       &            23.05.2023                            &          \\ \hline
+\end{tabular}%
+}
+\end{center}
+	
+	\makeatother%
+\end{enumerate}	
+
+%\clearpage
+%\newgeometry{
+%	a4paper,%
+%	footskip=0cm,%
+%	headsep=0.5cm,% 
+%	top=2cm, %поле сверху
+%	bottom=2cm, %поле снизу
+%	left=1cm, %поле ліворуч
+%	right=2cm, %поле праворуч
+%}
+%\vfill
+\vspace*{63mm}%
+\noindent%
+\makeatletter
+\hfill\begin{minipage}[t]{\linewidth}
+Студент\hfill\mfield{0.2\linewidth}{}{}{}{(підпис)} \mfield{0.4\linewidth}{}{}{\@authorinitials}{(Б.~О.~Макарчук)}\\	
+Науковий керівник роботи\hfill\mfield{0.2\linewidth}{}{}{}{(підпис)} \mfield{0.4\linewidth}{}{}{С.~М.~Пономаренко}{(ініціали, прізвище)}
+\end{minipage}
+\makeatother
+\restoregeometry
+
+\end{spacing}
+
+
+%\afterpage{%
+%	\newgeometry{<options>}
+%	% material for this page
+%	\clearpage
+%	\restoregeometry
+%}
